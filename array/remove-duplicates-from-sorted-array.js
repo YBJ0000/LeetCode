@@ -14,6 +14,8 @@ var removeDuplicates = function(nums) {
     If the current number is different from the previous one,
     assign it to the position where `k` is, and then move `k` forward
     In the end, the first `k` elements in `nums` are all unique, so return `k`
+
+    We iterate through the array once, so the time complexity is O(n).
     */
 
 
@@ -42,7 +44,7 @@ var removeDuplicates = function(nums) {
     In the end, return the length of `temp`.
 
     Note: the `includes` method will iterate through the array once.
-    Time complexity: O(n)
+    One loop is nested inside another, so the time complexity is O(n^2).
     */
 
     // let temp = []
