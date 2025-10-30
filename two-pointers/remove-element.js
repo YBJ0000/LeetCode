@@ -4,21 +4,24 @@
  * @return {number}
  */
 var removeElement = function(nums, val) {
-    let temp = [];
-    let k = 0;
 
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] == val) {
-            continue;
-        } else {
-            k++;
-            temp.push(nums[i])
+    /*
+    Create a temporary array `temp`.
+    Iterate through nums, if the current element is not equal to `val`, push it to `temp`.
+    In the end, copy all the elements from `temp` back into nums1, and return the length of `temp`.
+    Time complexity: O(n)
+    */
+    let temp = []
+
+    for (let num of nums) {
+        if (num !== val) {
+            temp.push(num)
         }
     }
 
     for (let i = 0; i < temp.length; i++) {
         nums[i] = temp[i]
     }
-    
-    return k
+
+    return temp.length
 };
