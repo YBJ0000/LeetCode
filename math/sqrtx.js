@@ -6,7 +6,7 @@ var mySqrt = function(x) {
 
     if (x < 2) return x
 
-    for (i = 0; i < x; i++) {
+    for (let i = 0; i < x; i++) {
         if (i * i === x) {
             return i
         } else if (i * i > x) {
