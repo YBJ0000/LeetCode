@@ -4,6 +4,19 @@
  */
 var maxProfit = function(prices) {
 
+    /*
+    Set up two variables:
+    - `minPrice` to track the lowest price so far
+    - `maxProfit` to track the highest profit we can get
+
+    Loop through prices:
+    If current price < minPrice, update minPrice.
+    Else if today's profit is higher, update maxProfit.
+
+    Return maxProfit at the end.
+    */
+
+
     let minPrice = Infinity
     let maxProfit = 0
 
