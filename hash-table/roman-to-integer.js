@@ -3,6 +3,15 @@
  * @return {number}
  */
 var romanToInt = function(s) {
+
+    /*
+    Create a dictionary to map Symbols to values
+    Iterate through the string from left to right:
+        - If current value less than the next value, substract the current value
+        - Otherwise, add the current value
+    */
+
+
     const map = {
         I: 1,
         V: 5,
