@@ -4,16 +4,24 @@
  */
 var lengthOfLastWord = function(s) {
 
+    // find the position of last non-space char
     let p = s.length - 1
-    while (p >= 0 && s[p] === " ") {
-        p--
+
+    for (let i = s.length - 1; i >= 0; i--) {
+        if (s[i] !== " ") {
+            p = i
+            break
+        }
     }
 
-    let length = 0
-    while (p >= 0 && s[p] !== " ") {
-        p--
-        length++
+    let count = 0
+    for (let i = p; i >= 0; i--) {
+        if (s[i] !== " ") {
+            count++
+        } else {
+            break
+        }
     }
-    
-    return length
+
+    return count
 };
