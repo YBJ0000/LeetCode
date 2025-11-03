@@ -5,15 +5,11 @@
 var maxProfit = function(prices) {
 
     /*
-    Set up two variables:
-    - `minPrice` to track the lowest price so far
-    - `maxProfit` to track the highest profit we can get
-
-    Loop through prices:
-    If current price < minPrice, update minPrice.
-    Else if today's profit is higher, update maxProfit.
-
-    Return maxProfit at the end.
+    Create two variables to store minimum price so far and maximum profit so far
+    Iterate through the `prices`:
+        - If today's price is less than the `minPrice`, update the `minPrice`
+        - If today's profit is higher than the `maxProfit`, update the `maxProfit`
+    Return the maximum profit
     */
 
 
@@ -29,23 +25,5 @@ var maxProfit = function(prices) {
     }
 
     return maxProfit
-
-
-
-    /*
-    Using a double loop will exceed the time limit.
-    */
-
-    // let current_max = 0
-
-    // for (let i = 0; i < prices.length; i++) {
-    //     for (let j = i + 1; j < prices.length; j++) {
-    //         if ((prices[j] - prices[i]) > current_max) {
-    //             current_max = prices[j] - prices[i]
-    //         }
-    //     }
-    // }
-
-    // return current_max
     
 };
