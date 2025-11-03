@@ -17,5 +17,14 @@ var romanToInt = function(s) {
 
     for (let i = 0; i < s.length; i++) {
         const current = map[s[i]]
+        const next = map[s[i + 1]]
+
+        if (current < next) {
+            total = total - current
+        } else {
+            total = total + current
+        }
     }
+
+    return total
 };
