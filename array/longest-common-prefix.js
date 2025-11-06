@@ -5,7 +5,7 @@
 var longestCommonPrefix = function(strs) {
     let prefix = ""
 
-    if (strs.length === 0) {
+    if (strs === "") {
         return prefix
     }
 
