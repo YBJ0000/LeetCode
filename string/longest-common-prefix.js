@@ -5,13 +5,13 @@
 var longestCommonPrefix = function(strs) {
     let prefix = ""
 
-    // if (strs.length === 0) {
-    //     return prefix
-    // }
-
-    if (strs.length === 1 && strs[0] === "") {
-        return "";
+    if (strs.length === 0) {
+        return prefix
     }
+
+    // if (strs.length === 1 && strs[0] === "") {
+    //     return "";
+    // }
 
     // find the shortest word and its char count
     let min_char_count = Infinity
