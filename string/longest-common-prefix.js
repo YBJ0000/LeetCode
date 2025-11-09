@@ -6,7 +6,7 @@ var longestCommonPrefix = function(strs) {
     let prefix = ""
 
     if (strs.length === 1) {
-        return prefix
+        return strs[0]
     }
 
     let minLen = Infinity
