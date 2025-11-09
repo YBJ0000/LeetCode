@@ -3,11 +3,21 @@
  * @return {string}
  */
 var longestCommonPrefix = function(strs) {
+
+    /*
+    Init prefix as empty string
+    Edge case: empty array
+    Step 1: find the minimum string length in the array
+    Edge case: one of the strings is empty
+    Step 2: compare chars column by column
+        - If any mismatch, return the prefix found so far
+        - If all strings match at this position, append the charactre
+    Return the final common prefix
+    */
+
     let prefix = ""
 
     if (strs.length === 0) return ""
-
-
 
     let minLen = Infinity
     for (let i = 0; i < strs.length; i++) {
