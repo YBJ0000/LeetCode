@@ -5,6 +5,10 @@
 var longestCommonPrefix = function(strs) {
     let prefix = ""
 
+    if (strs.length === 0) {
+        return prefix
+    }
+
     let minLen = Infinity
     for (let i = 0; i < strs.length; i++) {
         if (strs[i].length < minLen) {
