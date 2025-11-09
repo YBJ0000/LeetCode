@@ -5,12 +5,18 @@
 var longestCommonPrefix = function(strs) {
     let prefix = ""
 
+    if (strs.length === 0) return ""
+
+
+
     let minLen = Infinity
     for (let i = 0; i < strs.length; i++) {
         if (strs[i].length < minLen) {
             minLen = strs[i].length
         }
     }
+
+    if (minLen === 0) return ""
 
     for (let i = 0; i < minLen; i++) {
         for (let j = 0; j < strs.length; j++) {
@@ -21,4 +27,6 @@ var longestCommonPrefix = function(strs) {
             }
         }
     }
+
+    return prefix
 };
