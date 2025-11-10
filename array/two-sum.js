@@ -6,11 +6,11 @@
 var twoSum = function(nums, target) {
 
     /*
-    Create a Map `seen` to store elements has be seen
+    Create a Map `seen` to store elements that have be seen
     Scan through `nums`:
-        - We need another value `need` which satisfies `need = target - nums[i]`
-        - If the `need` is in `seen`, return its and current indices
-        - Otherwise, put the current value and index into `seen`
+        - Compute the value `need = target - nums[i]`
+        - If `need` exists in `seen`, return its index and the current index
+        - Otherwise, store the current value and its index in `seen`
     */
 
     const seen = new Map()
