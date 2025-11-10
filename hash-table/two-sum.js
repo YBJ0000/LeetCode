@@ -5,6 +5,14 @@
  */
 var twoSum = function(nums, target) {
 
+    /*
+    Create a Map `seen` to store elements has be seen
+    Scan through `nums`:
+        - We need another value `need` which satisfies `need = target - nums[i]`
+        - If the `need` is in `seen`, return its and current indices
+        - Otherwise, put the current value and index into `seen`
+    */
+
     const seen = new Map()
 
     for (let i = 0; i < nums.length; i++) {
